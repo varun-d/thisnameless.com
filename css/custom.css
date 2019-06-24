@@ -1,0 +1,62 @@
+/*
+* Custom Stylesheet 
+* Copyright 2019, Varun D
+* www.thisnameless.com
+*/
+
+html, body {
+	color: #181830;
+	font-family: 'Merriweather Sans', sans-serif;
+	background: #FEF9F0;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Old Standard TT', serif;
+}
+
+
+/* TOC
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Main Page
+*/
+
+
+/* Main Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#header {
+  margin-top: 25%;
+}
+
+header img {
+	width: 70%;
+}
+
+header img:hover {
+    animation: shimmy 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shimmy {
+	from {
+		transform: scale(1) rotate(0deg);
+	}
+
+	to {
+		transform: scale(1.1) rotate(1deg);
+	}
+}
+
+body {
+	letter-spacing: 0.03em;
+}
+
+a {
+	text-decoration: none;
+	color: #5C0F5D;
+}
+
+a:hover {
+	color: #684781;
+}
