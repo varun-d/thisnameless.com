@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Old+Standard+TT&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Old+Standard+TT&display=swap" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -23,17 +23,22 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
 
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/three.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
 
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row" id="header">
+  <div class="container container-above">
+    <div class="row">
       <div class="one-half column">
         <header role="banner"> <img src="images/logo.png" alt="Nameless Co Logo" />  </header>
         <p>Digital playground by Varun Dhanwantri</p>
@@ -41,22 +46,26 @@
     </div>
     <div class="row">
       <div class="one-half column">
-        <hr>
-        <p><a href="https://blog.thisnameless.com" target="_blank">Writings</a></p>
-        <hr>
+        <!-- <hr> -->
+        <h4>Writing</h4>
+        <p><a href="https://blog.thisnameless.com/tag/technology/" target="_blank">Technology</a></p>
+        <p><a href="https://blog.thisnameless.com/tag/design-story/" target="_blank">Design & Story</a></p>
+        <p><a href="https://blog.thisnameless.com/tag/ai-deep-learning/" target="_blank">AI & Deep Learning</a></p>
+        
+        <!-- <hr> -->
         <h4>Playground</h4>
-        <p><a href="http://projects.thisnameless.com/emito/" target="_blank">Emito</a></p>
-        <p><a href="http://projects.thisnameless.com/friend/" target="_blank">Hi Friend</a></p>
-        <p><a href="http://projects.thisnameless.com/agift/?name=varun" target="_blank">Gift of few hours</a></p>
-        <hr>
+        <p>Ideas: <a href="http://projects.thisnameless.com/emito/" target="_blank">Emito</a></p>
+        <p>Experiments: <a href="http://projects.thisnameless.com/friend/" target="_blank">Hi friend</a> | <a href="http://projects.thisnameless.com/agift/?name=varun" target="_blank">Gift of few hours</a> | <a href="http://projects.thisnameless.com/simple/" target="_blank">simple.</a></p>
+        <!-- <hr> -->
         <h4>Studio</h4>
-        <p><a href="https://soundcloud.com/varun-dhanwantri/sets/city-prose-in-piano" target="_blank">Piano album #1</a></p>
-        <p><a href="https://soundcloud.com/varun-dhanwantri/sets/the-palace" target="_blank">Piano album #2</a></p>
+        <p><a href="https://soundcloud.com/varun-dhanwantri/sets/city-prose-in-piano" target="_blank">Piano album #1</a> | <a href="https://soundcloud.com/varun-dhanwantri/sets/the-palace" target="_blank">Piano album #2</a></p>
       </div>
     </div>
   </div>
+  <div class="bg"></div>
 
-<!-- End Document
+<!-- End Document & Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/main.js"></script>
 </body>
 </html>
