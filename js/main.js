@@ -6,11 +6,12 @@ animate();
 function init() {
     // Renderer
     renderer = new THREE.WebGLRenderer();
-    renderer.physicallyCorrectLights = true; // todo: Use this at the end!
+    renderer.physicallyCorrectLights = true;
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
+    
     // Scene
     scene = new THREE.Scene();
 
