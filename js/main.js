@@ -1,5 +1,12 @@
 var scene, renderer, camera, render, d_light, material, mouse_light, mouse, raycaster;
 
+// All variables go here
+myconfig = {
+    backgroundColor: 0x30225F,
+    meshColor: 0x58366D,
+}
+
+
 init();
 animate();
 
@@ -14,6 +21,7 @@ function init() {
     
     // Scene
     scene = new THREE.Scene();
+    scene.background = new THREE.Color( myconfig.backgroundColor );
 
     // Camera
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 500);
@@ -44,7 +52,7 @@ function init() {
 
     // The Sphere
     var geo1 = new THREE.SphereGeometry(8, 28, 28);
-    material = new THREE.MeshStandardMaterial( { color: 0xff00ff} );
+    material = new THREE.MeshStandardMaterial( { color: myconfig.meshColor} );
     material.roughness = 1;
     material.metalness = 0.4;
     material.displacementMap = tex_disp;
@@ -142,3 +150,24 @@ function createSpotLight(color, x, y, z, power) {
     _light.castShadow = true;
     return _light;
 }
+
+const burger = document.querySelector(".burger");
+const menu_button = document.querySelector(".menu_button");
+const main_menu = document.querySelector('.main_menu'); //.style.opacity = '1.0';
+var menu_toggle = 0;
+
+menu_button.addEventListener("click", function () {
+//   const body = document.querySelector(".burger");
+  burger.classList.toggle("nav-open");
+
+  if (burger.classList.contains("nav-open")) {
+    main_menu.style.opacity = 1;
+  } else {
+    main_menu.style.opacity = 0;
+  }
+
+
+  // if needed to toggle multiple classes
+  // const toggleClasses = ["nav-open", "overflow-hidden"];
+  // toggleClasses.forEach((toggleClass) => body.classList.toggle(toggleClass));
+});
