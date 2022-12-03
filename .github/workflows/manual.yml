@@ -7,34 +7,26 @@ name: Deploy thisnameless.com
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'Varun Deploy Test'
-        # Input has to be provided for the workflow to run
-        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
+  setup:
     # The type of runner that the job will run on
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Deploying book
-      run: echo "Hello ${{ github.event.inputs.name }}"
-   
-    # Runs a single command using the runners shell
-    - name: Second step public
-      run: mkdir testrun && cd testrun && touch test.md
+    - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
     - name: SSH Secrets
       run: mkdir ~/.ssh && chmod 700 ~/.ssh
+
+    # Runs a single command using the runners shell
+    - name: Install deploy key
+      run: echo "test" > ~/.ssh/authorized_keys
+
+    # Runs a single command using the runners shell
+    - name: Deploying thisnameless.com
+      run: ssh deploybot@137.184.150.77
