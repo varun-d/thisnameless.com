@@ -48,12 +48,13 @@ h1 {
 	right: 42px;
 	top: 30%;
 	z-index: 2;
+	cursor: pointer;
 }
 
 .burger {
 	position: relative;
 	width: 32px;
-	cursor: pointer;
+	
 }
 
 .burger span {
